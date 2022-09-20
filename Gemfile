@@ -76,4 +76,7 @@ group :test do
   gem "factory_bot"
 end
 
+
+# gem "redis-rails"
+gem "redis"
 gem "resque"
