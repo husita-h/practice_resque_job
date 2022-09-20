@@ -1,0 +1,2 @@
+namespace :resque do
+end
