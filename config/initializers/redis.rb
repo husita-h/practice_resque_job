@@ -1,4 +1,6 @@
 require 'resque'
 
-Resque.redis = 'localhost:6379'
-Resque.redis.namespace = "resque:resque_sample:#{Rails.env}" # アプリ毎に異なるnamespaceを定義しておく
+redis_url = "localhost:6379"
+# redis_url = "redis://localhost:6379"
+# Resque.redis = "redis://localhost:6379"
+Resque.redis = Redis.new(url: redis_url)
