@@ -67,5 +67,9 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  
   config.web_console.allowed_ips = '0.0.0.0/0'
+  # config.cache_store = :redis_cache_store, { url: "redis://0.0.0.0:6379" }
+  # config.cache_store = :redis_cache_store, { url: "redis://localhost:6379" }
+  config.active_job.queue_adapter = :resque
 end
